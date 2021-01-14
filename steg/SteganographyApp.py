@@ -123,6 +123,7 @@ def binaryToNumber(bin):
 
 def main():
     #Ask user if they want to encode/decode
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     myMsg = ""
     choice = input("Would you like to Encode or Decode [E/D]?")
     if choice == "E" or choice == "e":
@@ -135,6 +136,6 @@ def main():
       msg = decode(yourImg)
       print(msg)
 
-     
+
 if __name__ == '__main__':
     main()

@@ -7,15 +7,20 @@
 import urllib.request
 import sys, getopt
 from bs4 import BeautifulSoup
-
+import os
 
 def main():
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     url = 'https://www.unomaha.edu/college-of-information-science-and-technology/about/faculty-staff/index.php'
     outputfile = 'emails.txt'
     print ('URL is "', url)
     print ('Output file is "', outputfile)
-    url = input("Enter a new URL or leave blank for no change: ")
-    outputfile = input("Enter a new output file or leave blank for no change: ")
+    tmpURL = input("Enter a new URL or leave blank for no change: ")
+    tmpOutputfile = input("Enter a new output file or leave blank for no change: ")
+    if len(tmpURL) > 0:
+      url = tmpURL
+    if len(tmpOutputfile) > 0:
+      outputfile = tmpOutputfile
     print ('URL is "', url)
     print ('Output file is "', outputfile)
 

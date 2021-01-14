@@ -1,6 +1,8 @@
 #This password cracker will bruteforce the password for several locked files.
 #We will need to try all of the possible permutations of passwords until we
 #get the correct one.
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 #SETUP
 fileName = "LockedFile1"
